@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+    }
+</style>
+<body>
+    <nav style="background-color: white;width: 100%;height: 12vh;">
+        <a href="{% url 'app1:home' %}"><img style="margin-left: 12vw;margin-top: 4vh;width: 11vw;float: left;" src="../media/pics/logo.svg" alt=""></a>
+        <a href="{% url 'app1:gift' %}"><div style="width: 3vw;height: 6vh;background-color: white;float: left;border-radius: 100%;margin-left: 50vw;margin-top: 5vh;border: 1px solid rgb(210, 208, 208);">
+            <img style="margin-left: 0.7vw;margin-top: 1.2vh;width: 1.5vw;" src="https://static.uacdn.net/production/_next/static/images/giftHomePage.svg?q=75&auto=format%2Ccompress&w=32" alt="">
+        </div></a>
+        <a href="{% url 'app1:pro' %}">
+            <div style="width: 3vw;height: 6vh;background-color: white;float: left;border-radius: 100%;margin-left: 1vw;margin-top: 5vh;border: 1px solid rgb(210, 208, 208);">
+                <img style="margin-left: 0.5vw;margin-top: 0.6vh;width: 2vw;" src="https://static.uacdn.net/thumbnail/user/default.png?fm=webp" alt="">
+            </div>
+        </a>
+    </nav>
+    <img style="width: 100%;height: 70vh;float: left;" src="https://static.uacdn.net/web-cms/Unacademy_Showcase_Master_16_9_40a440f5eb.png?q=75&auto=format%2Ccompress&w=1920" alt="">
+    <div style="width: 100%;height: 10vh;background-color: white;float: left;"></div>
+    <div style="width: 100%;height: 60vh;background-color: white;float: left;">
+        <div style="width: 50%;height: 100%;background-color: white;float: left;padding-top: 10vh;">
+            <span style="font-size: 3.5vw;color: rgb(81, 80, 80);margin-left: 10vw;">Crack your goal with</span><br>
+            <span style="font-size: 3.5vw;color: rgb(81, 80, 80);margin-left: 10vw;margin-top: 2vh;">India's top educators</span><br>
+            <span style="color: rgb(81, 80, 80);font-size: 1.3vw;margin-left: 10vw;margin-top: 2vh;">Over <span style="color: rgb(107, 178, 107);margin-top: 2vh;">10 crore</span> learners trust us for their preparation</span><br>
+            <a href="{% url 'app1:learn' %}"><button style="width: 25vw;height: 5vh;background-color: rgb(81, 80, 80);border: none;border-radius: 0.5vw;color: white;font-size: 0.9vw;margin-left: 11vw;margin-top: 4vh;">Start learning</button></a>
+        </div>
+        <div style="width: 50%;height: 100%;background-color: white;float: left;">
+            <img style="width: 35vw;height: 50vh;" src="https://static.uacdn.net/production/_next/static/images/home-illustration.svg?q=75&auto=format%2Ccompress&w=640" alt="">
+        </div>
+    </div>
+    <div style="width: 100%;height: 6vh;background-color: white;float: left;"></div>
+    <span style="font-size: 2vw;color: rgb(81, 80, 80);margin-left: 10vw;">Select your goal / exam</span><br>
+    <span style="color: rgb(81, 80, 80);font-size: 1.3vw;margin-left: 10vw;"><span style="color: rgb(107, 178, 107);font-size: 1.3vw;">200+ </span>exams available for your preperation</span>
+    <input type="text" style="width: 80%;height: 5vh;margin-left: 10vw;margin-top: 2vh;border: 1px solid rgb(210, 208, 208);border-radius: 0.5vw;font-size: 1vw;" placeholder="  🔍   Type the goal/exam you're preparing for"><br>
+    <span style="font-size: 1.5vw;color: rgb(81, 80, 80);margin-left: 10vw;margin-top: 5vh;float: left;">Popular goals</span><br><br><br>
+    <div style="width: 100%;height: 5vh;background-color: white;"></div>
+    <div style="width: 10vw;height: 50vh;background-color: white;float: left;"></div>
+    {% for i in data %}
+    <div style="width: 18vw;height: 35vh;background-color:white;float: left;border-radius: 1vw;border: 0.1vw solid gainsboro;margin-top: 5vh;">
+        <img style="width: 5vw;margin-left: 7vw;padding-top: 8vh;"  src="{{ i.image.url }}" name="image" alt=""><br>
+        <span style="margin-left: 5vw;" name="name">{{i.name}}</span>
+    </div>
+    <div style="width: 2vw;height: 35vh;background-color: white;float: left;"></div>
+    {% endfor %}
+    <button style="border: 0.1vw solid black;border-radius: 0.3vw;width: 18vw;height: 5vh;margin-top: 6vh;margin-left: 10vw;font-size: 0.9vw;background-color: white;">See all goals (200+)</button>
+    <div style="width: 80vw;height: 70vh;background-color: white;margin-left: 10vw;box-shadow: -0.5vw -0.5vw 0.5vw gainsboro;margin-top: 10vh;">
+        <div style="width: 50%;height: 100%;background-color: transparent;float: left;"><img style="width: 30vw;height: 50vh;margin-left: 3vw;margin-top: 10vh;border-radius: 0.8vw;" src="../media/pics/una.webp" alt=""></div>
+        <div style="width: 50%;height: 100%;background-color: transparent;float: left;">
+            <span style="color: rgb(81, 140, 163);padding-top: 7vh;float: left;">Introducing✨</span><br><br><br><br>
+            <span style="font-size: 2vw;">Unacademy Centres for IIT</span><br>
+            <span style="font-size: 2vw;">JEE and NEET UG</span><br><br>
+            <span style="color: grey;">Admissions open in Kota, Delhi, Chandigarh,</span><br>
+            <span style="color: grey;float: left;">Sikar, Indore and 20+ other cities!</span><br><br>
+            <span style="font-size: 1.5vw;color: rgb(59, 58, 58);"><img style="width: 1vw;" src="../media/pics/tick.svg" alt="">   Learn from top educators in your city</span><br><br>
+            <span style="font-size: 1.5vw;color: rgb(59, 58, 58);"><img style="width: 1vw;" src="../media/pics/tick.svg" alt="">   In-person classes & doubt solving</span><br><br>
+            <span style="font-size: 1.5vw;color: rgb(59, 58, 58);"><img style="width: 1vw;" src="../media/pics/tick.svg" alt="">   Bonus access to online learning</span><br>
+            <a href="{% url 'app1:find' %}"><button style="width: 10vw;height: 5vh;background-color: rgb(63, 62, 62);border: none;border-radius: 0.5vw;color: white;font-size: 0.9vw;margin-left: 0vw;margin-top: 4vh;">Find a center</button></a>
+        </div>
+    </div>
+        <div style="width: 100%;height: 70vh;background-color: white;margin-top: 10vh;float: left;">
+            <div style="width: 25vw;height: 70vh;margin-left: 10vw;background-color: white;float: left;">
+                <img style="width: 100%;" src="../media/pics/daily.svg" alt="">
+                <h4 style="margin-top: 5vh;">Daily live classes</h4><br>
+                <span style="font-size: 1.2vw;">Chat with educators, ask questions, answer</span><br>
+                <span style="font-size: 1.2vw;">live polls, and get your doubts cleared - all</span><br>
+                <span style="font-size: 1.2vw;">while the class is going on</span>
+            </div>
+            <div style="width: 25vw;height: 70vh;margin-left: 3vw;background-color: white;float: left;">
+                <img style="width: 100%;" src="../media/pics/practice.svg" alt="">
+                <h4 style="margin-top: 5vh;">Practice and revise</h4><br>
+                <span style="font-size: 1.2vw;">Learning isn't just limited to classes with our</span><br>
+                <span style="font-size: 1.2vw;">practice section, mock tests and lecture notes</span><br>
+                <span style="font-size: 1.2vw;">shared as PDFs for your revision</span>
+            </div>
+            <div style="width: 25vw;height: 70vh;margin-left: 3vw;background-color: white;float: left;">
+                <img style="width: 100%;" src="../media/pics/learn.svg" alt="">
+                <h4 style="margin-top: 5vh;">Learn anytime, anywhere</h4><br>
+                <span style="font-size: 1.2vw;">One subscription gets you access to all our</span><br>
+                <span style="font-size: 1.2vw;">live and recorded classes to watch from the</span><br>
+                <span style="font-size: 1.2vw;">comfort of any of your devices</span>
+            </div>
+        </div>
+    <div style="width: 80vw;height: 70vh;background-color: white;margin-left: 10vw;box-shadow: -0.5vw -0.5vw 0.5vw gainsboro;margin-top: 10vh;float: left;">
+        <div style="width: 50%;height: 100%;background-color: white;float: left;">
+            <h3 style="font-size: 3vw;color: rgb(71, 69, 69);padding-left: 7vw;padding-top: 25vh;">Get the learning</h3>
+            <h3 style="font-size: 3vw;color: rgb(71, 69, 69);padding-left: 7vw;">app</h3><br>
+            <span style="padding-left: 7vw;color: rgb(71, 69, 69);">Download lessons and learn anytime,</span>
+            <span style="padding-left: 7vw;color: rgb(71, 69, 69);">anywhere with the Unacademy app</span><br><br>
+            <img style="width: 10vw;margin-left: 7vw;" src="../media/pics/app_store.webp" alt="">
+            <img style="width: 11vw;margin-left: 1vw;" src="../media/pics/play_store.webp" alt="">
+        </div>
+        <div style="width: 50%;height: 100%;background-color: white;float: left;">
+            <img style="width: 25vw;margin-top: 17vh;margin-left: 5vw;" src="../media/pics/newApp.webp" alt="">
+        </div>
+    </div>
+    <div style="width: 100%;height: 90vh;background-color: white;float: left;margin-top: 20vh;">
+        <div style="width: 50%;height: 100%;background-color: white;float: left;">
+            <h1 style="color: rgb(71, 69, 69);padding-left: 23vh;padding-top: 23vh;">Start learning with</h1>
+            <h1 style="color: rgb(71, 69, 69);padding-left: 23vh;">Unacademy</h1><br>
+            <span style="color: rgb(71, 69, 69);padding-left: 23vh;">Get unlimited access to structured</span><br>
+            <span style="color: rgb(71, 69, 69);padding-left: 23vh;">courses & doubt clearing sessions</span><br><br><br>
+            <a href="{% url 'app1:learn' %}"><button style="width: 12vw;height: 7vh;margin-left: 23vh;background-color: rgb(32, 144, 32);border: none;border-radius: 0.5vw;">Start learning</button></a>
+        </div>
+        <div style="width: 50%;height: 100%;background-color: white;float: left;">
+            <img style="width: 35vw;margin-top: 10vh;margin-left: 3vw;float: left;" src="../media/pics/Screenshot_2025-01-14_145430-removebg-preview.png" alt="">
+        </div> 
+    </div>
+    <div style="width: 100%;height: 30vh;background-color: white;float: left;"></div>
+    <div style="width: 100%;height: 70vh;background-color: white;float: left;">
+        <div style="width: 50%;height: 100%;background-color: white;float: left;">
+            <img style="width: 11vw;margin-left: 23vh;" src="../media/pics/logo.svg" alt=""><br>
+            <span style="padding-left: 23vh;color: rgb(111, 108, 108);font-size: 1vw;">Unacademy is democratising education,</span><br>
+            <span style="padding-left: 23vh;color: rgb(111, 108, 108);font-size: 1vw;">making it accessible to all. Join the revolution,</span><br>
+            <span style="padding-left: 23vh;color: rgb(111, 108, 108);font-size: 1vw;">learn on India's largest learning platform.</span><br><br>
+            <img style="width: 7vw;margin-left: 23vh;" src="../media/pics/app_store.webp" alt="">
+            <img style="width: 8vw;margin-left: 3vh;" src="../media/pics/play_store.webp" alt=""><br><br><br>
+            <div style="width: 3vw;height: 0.1vh;margin-left: 23vh;background-color: gainsboro;"></div><br>
+            <span style="padding-left: 23vh;color: rgb(27, 26, 26);font-size: 1vw;">Reach out to us</span><br>
+            <span style="padding-left: 23vh;color: rgb(111, 108, 108);font-size: 1vw;">Get your questions answered about learning</span><br>
+            <span style="padding-left: 23vh;color: rgb(111, 108, 108);font-size: 1vw;">with Unacademy.</span><br><br>
+            <span style="font-size: 1.2vw;padding-left: 23vh;color: rgb(86, 83, 83);">🕻 Call +9876453296</span>
+        </div>
+        <div style="width: 50%;height: 100%;background-color: white;float: left;">
+            <div style="width: 100%;height: 50%;float: left;background-color: white;">
+                <div style="width: 33%;height: 100%;background-color: white;float: left;">
+                    <span style="font-size: 1.3vw;">Company</span><br><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);">About Us</span><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);">Shikshodaya</span><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);">Careers</span><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);">Blogs</span><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);">Privacy Policy</span><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);">Terms and conditions</span>
+                </div>
+                <div style="width: 33%;height: 100%;background-color: white;float: left;">
+                    <span style="font-size: 1.3vw;">Help & support</span><br><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);">User Guidelines</span><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);">Site Map</span><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);">Refund Policy</span><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);">Takedown Policy</span><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);">Grievance Redressal</span>
+                </div>
+                <div style="width: 33%;height: 100%;background-color: white;float: left;">
+                    <span style="font-size: 1.3vw;">Company</span><br><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);"><img style="width: 2vw;margin-top: 2vh;" src="../media/pics/small1.svg" alt=""> Leaner app</span><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);"><img style="width: 2vw;margin-top: 2vh;" src="../media/pics/small2.svg" alt=""> Educator app</span><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);"><img style="width: 2vw;margin-top: 2vh;" src="../media/pics/small3.svg" alt=""> Parent app</span><br>
+                </div>
+            </div>
+            <div style="width: 100%;height: 50%;float: left;background-color: white;">
+                <div style="width: 33%;height: 100%;background-color: white;float: left;">
+                    <span style="font-size: 1.3vw;">Popular goals</span><br><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);">IIT JEE</span><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);">UPSC</span><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);">SSC</span><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);">CSIR UGC NET</span><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);">NEET UG</span>
+                </div>
+                <div style="width: 33%;height: 100%;background-color: white;float: left;">
+                    <span style="font-size: 1.3vw;">Unacademy Centre</span><br><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);">Kota IIT JEE</span><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);">Kota NEET UG</span><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);">Kota Foundation</span><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);">Delhi UPSC</span><br>
+                </div>
+                <div style="width: 33%;height: 100%;background-color: white;float: left;">
+                    <span style="font-size: 1.3vw;">Study material</span><br><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);">UPSC Study Material</span><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);">NEET UG Study Material</span><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);">CA Foundation Study Material</span><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);">JEE Study Material</span><br>
+                    <span id="comp" style="font-size: 1vw;color: rgb(111, 108, 108);">SSC Study Material</span>
+                </div>
+            </div>   
+        </div>
+    </div>
+</body>
+</html>
