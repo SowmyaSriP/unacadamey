@@ -121,13 +121,14 @@ WSGI_APPLICATION = 'unacadamey.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': '',  
+        'NAME': 'railway',
         'USER': 'root',
-        'PASSWORD': 'ogcVmKUXkDOmmtKKTBaEhNCeFGIjjYMG',
-        'HOST': 'localhost',  
-        'PORT': '3306',       
+        'PASSWORD': 'oMPEgChfOJZfzmwIrnHiQIqrjfMvHoOW',
+        'HOST': 'roundhouse.proxy.rlwy.net',
+        'PORT': '42339',
     }
 }
+
 
 
 # Password validation
