@@ -19,15 +19,6 @@ def pro(request):
         form.save()
     p1=prosForm()
     return render(request,'pro.html',{'form':p1})
-
-
-
-
-
-
-
-
-
 def setting(request):
     return render(request, 'setting.html')
 def courses(request):
